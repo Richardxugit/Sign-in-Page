@@ -1,13 +1,20 @@
-import React from 'react';
+import React from "react";
+import { Layout } from "antd";
 
-import './App.css';
+import "./App.css";
+import "antd/dist/antd.css";
 
-const App=()=> {
+const { Sider, Content } = Layout;
+
+const App = () => {
   return (
-    <div className="App">
-    APP
-    </div>
+    <Layout className="App">
+      <Sider className='sider' width='25%'>Sider</Sider>
+      <Layout>
+        <Content className="content">Content</Content>
+      </Layout>
+    </Layout>
   );
-}
+};
 
 export default App;
